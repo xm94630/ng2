@@ -5,7 +5,7 @@
 (function(global) {
   // map tells the System loader where to look for things
   var map = {
-    'app':                        'app', // 'dist',
+    'app':                        'dist', // 此处原来的路径是“app/”，后来将typecscript编译后的放到了“dist”，所以改了
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs'

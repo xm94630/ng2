@@ -10,18 +10,33 @@ import { Component } from '@angular/core';
     </header>
     
     <main>
-		<div class="jumbotron">
-		  <h1>Hi,xm94630!</h1>
-		  <h1>{{message}}</h1>
-		</div>
+
+    	<div class="row">
+			<div class="col-sm-4">
+
+				<div *ngIf="users">
+				<ul class="list-group users-list">
+					<li *ngFor="let user of users" class="list-group-item">
+						{{user.name}}（id:{{user.id}}）
+					</li>
+				</ul>
+				</div>
+
+			</div>
+			<div class="col-sm-8">
+				<div class="jumbotron">
+				  <h1>Hi,xm94630!</h1>
+				  {{message}}
+				</div>
+			</div>
+    	</div>
+
 		
-		<div *ngFor="let user of users">
-			<p>用户名字是{{user.name}}（id:{{user.id}}）</p>
-		</div>
+
 	</main>
 
     <footer class="text-center">
-	Copyright &copy; 2016
+		Copyright &copy; 2016  
     </footer>
   `,
   styles: [`
